@@ -15,7 +15,8 @@ body {
 
 footer {
   margin-top: 8px;
-  height: 80px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   width: 100%;
   background-color: hsl(0, 0%, 22.5%);
   box-shadow: 0px -2px 5px black;
@@ -57,7 +58,7 @@ div#navlinks {
   display: flex;
 }
 
-div#navlinks a.navlink {
+div#navlinks a {
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
@@ -175,4 +176,45 @@ div#navmenu.cross div:nth-child(3) {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+/* LIENS EN BAS DE PAGE */
+
+div#footerlinks {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div#footerlinks div {
+  height: 50px;
+  background-color: white;
+}
+
+/* RESAU SOCIAUX EN BAS DE LA PAGE */
+
+div#sociallinks {
+  display: flex;
+  width: calc(25px * 12);
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+div#sociallinks a {
+  margin: 2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: white;
+  transition: 0.2s;
+}
+
+div#sociallinks a:hover {
+  margin: 0px;
+  width: 29px;
+  height: 29px;
+  border-radius: 29px;
+  background-color: gray;
 }
