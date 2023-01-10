@@ -38,12 +38,7 @@ div#navbar a {
   color: #f2f2f2;
   text-decoration: none;
   height: 100%;
-  transition: 0.1s;
-}
-
-div#navbar a.active {
-  background: hsl(0, 0%, 0%);
-  box-shadow: 0px 0px 5px black;
+  transition: 0.2s;
 }
 
 div#navbar a.logo {
@@ -51,25 +46,36 @@ div#navbar a.logo {
   padding: 0px 10px;
 }
 
-div#navbar a.link {
+div#navbar a.logo img {
+  height: 100%;
+}
+
+/* LIENS DANS LA BARRE DE NAVIGATION */
+
+div#navlinks {
+  float:right;
+  display: flex;
+}
+
+div#navlinks a.navlink {
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
-  float: right;
   text-align: center;
+  height: 16px;
   padding: calc((50px - 16px) / 2) 20px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-div#navbar a:hover {
-  background: hsl(0, 0%, 10%);
+div#navlinks a.active {
+  background: hsl(0, 0%, 0%);
   box-shadow: 0px 0px 5px black;
 }
 
-div#navbar a.logo img {
-  height: 100%;
+div#navlinks a:hover {
+  background: hsl(0, 0%, 10%);
+  box-shadow: 0px 0px 5px black;
 }
-
 
 /* BOUTON DE HAUT DE PAGE */
 
@@ -99,12 +105,21 @@ button#movement:hover  {
 
 /* MENU BURGER */
 
-@media screen and (max-width: 600px) {
-  .navbar a.link {display: none;}
-  .navbar div#navmenu {display: flex !important;}
+@media screen and (max-width: 800px) {
+  div#navbar #navlinks {
+    display: block !important;
+    position: fixed;
+    top: 50px;
+    right: -110%;
+    width: 100%;
+    background-color: hsl(0, 0%, 40%);
+    transition: 0.2s;
+  }
+
+  div#navmenu {display: flex !important;}
 }
 
-.navbar div#navmenu {
+div#navmenu {
   display: none;
   float: right;
   height: 34px;
@@ -115,20 +130,24 @@ button#movement:hover  {
   flex-direction: column;
 }
 
-.navbar div#navmenu div {
+div#navmenu div {
   width: 100%;
   height: 6px;
   background-color: white;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
-.navbar div.navmenucross div:nth-child(1) {
+div#navmenu:hover div {
+  background-color: hsl(0, 0%, 70%);
+}
+
+div#navmenu.cross div:nth-child(1) {
   transform: translateY(14px) rotate(-45deg);
 }
-.navbar div.navmenucross div:nth-child(2) {
+div#navmenu.cross div:nth-child(2) {
   opacity: 0;
 }
-.navbar div.navmenucross div:nth-child(3) {
+div#navmenu.cross div:nth-child(3) {
   transform: translateY(-14px) rotate(45deg);
 }
 
