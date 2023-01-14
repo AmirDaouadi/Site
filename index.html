@@ -2,52 +2,106 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1,width=device-width" />
-    <title>SITE</title>
+    <meta name="viewport" content="initial-scale=1" />
+    <title>CloudCore</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-
   <body>
+    <!-- HEADER -->
     <header>
-      <div id="navbar">
-        <a href="index.html" class="logo">
-          <img class="selector" alt="logo" src="logo.png" />
-        </a>
-        <div id="navlinks">
-          <a href="index.html" >PAGE 1</a>
-          <a href="index.html" class="active">PAGE 2</a>
-          <a href="index.html" >PAGE 3</a>
-          <a href="index.html" >PAGE 4</a>
-          <a href="index.html" >PAGE 5</a>
+      <!-- ICON -->
+      <a href="index.html" class="logo">
+        <img class="selector" alt="logo" src="logo-white.svg" />
+      </a>
+      <div class="line-separator"></div>
+      <!-- PAGE -->
+      <div class="page">ACCUEIL</div>
+
+      <div class="separator"></div>
+      <!-- LINKS -->
+      <div id="navlinks">
+        <a href="index.html" class="active">ACCUEIL</a>
+        <a href="index.html">PRODUITS</a>
+        <a href="index.html">NEWS</a>
+        <a href="index.html">NOTRE ENTREPRISE</a>
+        <a href="index.html">NOUS CONTACTER</a>
+      </div>
+      <!-- BURGER MENU -->
+      <div id="navmenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- NAV BUTTON -->
+    <button id="movement"><img class="selector" alt="^" src="up.png" /></button>
+    <!-- CONTENT -->
+    <div id="content">
+      <div>INTRODUCTION</div>
+      <div>PETITE DESCRIPTION DES PRODUITS</div>
+      <div>PAGE DE PRIX INTEGREE</div>
+      <div>PETITE DESCRIPTION DE L'ENTREPRISE</div>
+
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <!-- LINK MAP -->
+        <div id="maplinks">
+          <div>
+            <div>CLOUDCORE</div>
+            <div>
+              <a href="index.html">À propos</a>
+              <a href="index.html">Aperçu des produits</a>
+              <a href="index.html">Nous rejoindre</a>
+              <a href="index.html">News</a>
+              <a href="index.html">Mentions Légales</a>
+            </div>
+          </div> 
+          <div>
+            <div>SUPPORT</div>
+            <div>
+              <a href="index.html">Contact</a>
+              <a href="index.html">Carte du site</a>
+              <a href="index.html">Charte graphique</a>
+            </div>
+          </div>
         </div>
-        <div id="navmenu">
-          <div></div>
-          <div></div>
-          <div></div>
+        <!-- SOCIAL AND LEGAL -->
+        <div id="sociallegal">
+          <!-- LEGAL -->
+          <div id="legal">
+            © 2023 CloudCore, LLC. Tous les droits sont réservés.
+          </div>
+          <!-- SOCIAL -->
+          <div id="social">
+            <div>
+              <a href="https://facebook.com"><div class="fa fa-facebook"></div></a>
+            </div>
+            <div>
+              <a href="index.html"><div class="fa fa-twitter"></div></a>
+            </div>
+            <div>
+              <a href="index.html"><div class="fa fa-linkedin"></div></a>
+            </div>
+            <div>
+              <a href="index.html"><div class="fa fa-youtube-play"></div></a>
+            </div>
+            <div>
+              <a href="index.html"><div class="fa fa-instagram"></div></a>
+            </div>
+            <div>
+              <a href="index.html"><div class="fa fa-rss"></div></a>
+            </div>
+          </div>
         </div>
       </div>
-      
-    </header>
-    <button id="movement">
-      <img class="selector" alt="^" src="up.png" />
-    </button>
-    <div id="content"></div>
-    <footer>
-      
-    <div id="sociallinks">
-      <a href="index.html"></a>
-      <a href="index.html"></a>
-      <a href="index.html"></a>
-      <a href="index.html"></a>
-      <a href="index.html"></a>
-    </div>
-    <div id="footerlinks">
-      <div>LIENS A</div>
-      <div>LIENS B</div>
-      <div>LIENS C</div>
-      <div>LIENS D</div>
-    </div>
     </footer>
+    <!-- SCRIPTS -->
     <script src="scripts.js"></script>
   </body>
 </html>
