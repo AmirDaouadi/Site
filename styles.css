@@ -351,7 +351,7 @@ footer div#social > div > a:hover > div {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   footer div#maplinks > div > div:nth-child(2) {
     flex-direction: column;
     gap: 0;
