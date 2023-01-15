@@ -2,106 +2,31 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=0.5,maximum-scale=3.0, initial-scale=1.0, user-scalable=1"
+    />
     <title>CloudCore</title>
-    <link rel="icon" href="logo-single-white.svg">
+    <link rel="icon" href="images/logo-single-white.svg" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
   </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <!-- ICON -->
-      <a href="index.html" class="logo">
-        <img class="selector" alt="logo" src="logo-white.svg" />
-      </a>
-      <div class="line-separator"></div>
-      <!-- PAGE -->
-      <div class="page">ACCUEIL</div>
-
-      <div class="separator"></div>
-      <!-- LINKS -->
-      <div id="navlinks">
-        <a href="index.html" class="active">ACCUEIL</a>
-        <a href="index.html">PRODUITS</a>
-        <a href="index.html">NEWS</a>
-        <a href="index.html">NOTRE ENTREPRISE</a>
-        <a href="index.html">NOUS CONTACTER</a>
-      </div>
-      <!-- BURGER MENU -->
-      <div id="navmenu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </header>
-    <!-- NAV BUTTON -->
-    <button id="movement"><img class="selector" alt="^" src="up.png" /></button>
+  <body data-pagename="ACCUEIL" data-linkname="accueil">
+    <!-- HEADER - LOADED AUTOMATICALLY -->
+    <header class="loader" data-src="header.html"></header>
     <!-- CONTENT -->
     <div id="content">
       <div>INTRODUCTION</div>
       <div>PETITE DESCRIPTION DES PRODUITS</div>
       <div>PAGE DE PRIX INTEGREE</div>
       <div>PETITE DESCRIPTION DE L'ENTREPRISE</div>
-
+      <div>DERNIERES NEWS</div>
     </div>
-    <!-- FOOTER -->
-    <footer>
-      <div>
-        <!-- LINK MAP -->
-        <div id="maplinks">
-          <div>
-            <div>CLOUDCORE</div>
-            <div>
-              <a href="index.html">À propos</a>
-              <a href="index.html">Aperçu des produits</a>
-              <a href="index.html">Nous rejoindre</a>
-              <a href="index.html">News</a>
-              <a href="index.html">Mentions Légales</a>
-            </div>
-          </div> 
-          <div>
-            <div>SUPPORT</div>
-            <div>
-              <a href="index.html">Contact</a>
-              <a href="index.html">Carte du site</a>
-              <a href="index.html">Charte graphique</a>
-            </div>
-          </div>
-        </div>
-        <!-- SOCIAL AND LEGAL -->
-        <div id="sociallegal">
-          <!-- LEGAL -->
-          <div id="legal">
-            © 2023 CloudCore, LLC. Tous les droits sont réservés.
-          </div>
-          <!-- SOCIAL -->
-          <div id="social">
-            <div>
-              <a href="https://facebook.com"><div class="fa fa-facebook"></div></a>
-            </div>
-            <div>
-              <a href="index.html"><div class="fa fa-twitter"></div></a>
-            </div>
-            <div>
-              <a href="index.html"><div class="fa fa-linkedin"></div></a>
-            </div>
-            <div>
-              <a href="index.html"><div class="fa fa-youtube-play"></div></a>
-            </div>
-            <div>
-              <a href="index.html"><div class="fa fa-instagram"></div></a>
-            </div>
-            <div>
-              <a href="index.html"><div class="fa fa-rss"></div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- FOOTER - LOADED AUTOMATICALLY -->
+    <footer class="loader" data-src="footer.html"></footer>
     <!-- SCRIPTS -->
     <script src="scripts.js"></script>
   </body>

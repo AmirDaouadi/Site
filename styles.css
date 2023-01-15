@@ -1,42 +1,57 @@
 :root {
-  --color-1: rgb(0,0,0);
-  --color-2: rgb(255,0,0);
-  --color-3: rgb(255,255,255);
-  --color-4: rgb(192,192,192);
-  --color-5: rgb(54,54,54);
-  --color-6: rgb(235,235,235);
+  --color-1: rgb(0, 0, 0);
+  --color-2: rgb(255, 0, 0);
+  --color-3: rgb(255, 255, 255);
+  --color-4: rgb(192, 192, 192);
+  --color-5: rgb(40, 40, 40);
+  --color-6: rgb(235, 235, 235);
 
-  --header-height: 60px;
+  --header-height: 54px;
   --header-bg-color: var(--color-1);
   --header-separator-color: var(--color-2);
   --header-page-color: var(--color-3);
   --header-button-fg-color: var(--color-3);
-  --header-button-active-color: var(--color-5);
-  --header-button-hovered-color: var(--color-4);
+  --header-button-fg-active-color: var(--color-4);
+  --header-button-bg-active-color: var(--color-5);
   --header-button-fg-hovered-color: var(--color-2);
   --header-burger-color: var(--color-3);
   --header-burger-hovered-color: var(--color-2);
   --header-menu-border-color: var(--color-4);
 
-  --footer-bg-color: var(--color-1);
+  --footer-bg-color: var(--color-5);
   --footer-map-title-color: var(--color-3);
   --footer-map-link-color: var(--color-3);
+  --footer-map-link-active-color: var(--color-2);
   --footer-map-link-hovered-color: var(--color-2);
 
   --footer-social-fg-color: var(--color-1);
   --footer-social-fg-hovered-color: var(--color-2);
   --footer-social-bg-color: var(--color-3);
-  --footer-social-bg-hovered-color: var(--color-4);
 
-  --footer-legal-fg-color: var(--color-5);
+  --footer-legal-fg-color: var(--color-4);
 
   --nav-bg-color: var(--color-3);
-  --nav-bg-hovered-color: var(--color-4);
+  --nav-fg-color: var(--color-1);
+  --nav-fg-hovered-color: var(--color-2);
 
-  --content-bg-primary-color: var(--color-3); 
-  --content-bg-secondary-color: var(--color-6); 
+  --content-bg-primary-color: var(--color-3);
+  --content-bg-secondary-color: var(--color-6);
 
-  font-family: "Source Sans Pro", sans-serif;
+  --text-input-bg-color: var(--color-6);
+  --text-input-border-hovered-color: var(--color-5);
+
+  --checkbox-input-bg-color: var(--color-6);
+  --checkbox-input-border-color: var(--color-5);
+  --checkbox-input-fg-color: var(--color-2);
+
+  --button-bg-color: var(--color-1);
+  --button-bg-hovered-color: var(--color-2);
+  --button-fg-color: var(--color-3);
+  --button-arrow-color: var(--color-2);
+  --button-arrow-hovered-color: var(--color-1);
+
+  --font: "Bahnschrift", sans-serif;
+  font-family: var(--font);
 }
 
 body {
@@ -61,10 +76,10 @@ header {
 
 /* CURRENT PAGE */
 
-header div.page {
+header div#page {
   color: var(--header-page-color);
-  font-weight: bold;
-  font-size: 20px;
+
+  font-size: 18px;
   padding: calc((var(--header-height) - 20px) / 2) 20px;
 }
 
@@ -91,7 +106,7 @@ header a.logo {
 }
 
 header a.logo > img {
-  padding: 4px 4px;
+  padding: 8px;
 }
 
 /* LINKS */
@@ -104,7 +119,7 @@ header div#navlinks > a {
   display: block;
   color: var(--header-button-fg-color);
   text-align: center;
-  font-weight: bold;
+
   text-decoration: none;
   font-size: 16px;
   padding: calc((var(--header-height) - 16px) / 2) 30px;
@@ -112,11 +127,11 @@ header div#navlinks > a {
 }
 
 header div#navlinks > a.active {
-  background-color: var(--header-button-active-color);
+  background-color: var(--header-button-bg-active-color);
+  color: var(--header-button-fg-active-color);
 }
 
 header div#navlinks > a:hover {
-  background-color: var(--header-button-hovered-color);
   color: var(--header-button-fg-hovered-color);
 }
 
@@ -128,7 +143,7 @@ header div#navlinks > a:hover {
     position: fixed;
     top: var(--header-height);
     right: -110%;
-    overflow-y:auto;
+    overflow-y: auto;
     max-height: calc(90% - var(--header-height));
     background-color: var(--header-bg-color);
     transition: 0.2s;
@@ -175,17 +190,20 @@ header div#navmenu.cross > div:nth-child(3) {
 
 /* ----- NAV BUTTON ----- */
 
-button#movement > img {
-  width: 20px;
-  height: 20px;
-}
-
-button#movement {
+div#movement {
   position: fixed;
   right: 10px;
   bottom: -50px;
   height: 45px;
   width: 45px;
+  display: grid;
+  place-content: center;
+  transition: 0.2s;
+}
+
+div#movement > button {
+  width: 41px;
+  height: 41px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
@@ -195,8 +213,19 @@ button#movement {
   background-color: var(--nav-bg-color);
 }
 
-button#movement:hover {
-  background-color: var(--nav-bg-hovered-color);
+div#movement > button > div {
+  font-size: 18px;
+  transition: 0.2s;
+  color: var(--nav-fg-color);
+}
+
+div#movement > button:hover {
+  width: 45px;
+  height: 45px;
+}
+
+div#movement > button:hover > div {
+  color: var(--nav-fg-hovered-color);
 }
 
 /* ----- FOOTER ----- */
@@ -234,15 +263,9 @@ footer div#maplinks > div {
 footer div#maplinks > div > div:nth-child(1) {
   color: var(--footer-map-title-color);
   text-decoration: none;
-  font-weight: bold;
+
   font-size: 18px;
   margin-bottom: 8px;
-}
-
-footer div#maplinks > div > div:nth-child(1)::before {
-  content: "";
-  border-right: 4px solid var(--footer-map-link-hovered-color);
-  margin-right: 4px;
 }
 
 footer div#maplinks > div > div:nth-child(2) {
@@ -261,6 +284,10 @@ footer div#maplinks > div > div:nth-child(2) > a {
 
 footer div#maplinks > div > div:nth-child(2) > a:hover {
   color: var(--footer-map-link-hovered-color);
+}
+
+footer div#maplinks > div > div:nth-child(2) > a.active {
+  color: var(--footer-map-link-active-color);
 }
 
 /* SOCIAL AND LEGAL */
@@ -311,8 +338,6 @@ footer div#social > div > a {
 footer div#social > div > a:hover {
   width: 100%;
   height: 100%;
-  background-color: var(--footer-social-bg-hovered-color);
-  box-shadow: 0px 0px 8px black;
 }
 
 footer div#social > div > a > div {
@@ -325,6 +350,10 @@ footer div#social > div > a > div {
 
 footer div#social > div > a:hover > div {
   color: var(--footer-social-fg-hovered-color);
+}
+
+footer div#social > div > a > div {
+  color: var(--footer-social-fg-color);
 }
 
 @media screen and (max-width: 1080px) {
@@ -362,14 +391,156 @@ footer div#social > div > a:hover > div {
 
 #content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#content > div {
-  height: 500px;
+#content > div.colored {
+  width: 100%;
+  height: 400px;
   background-color: var(--content-bg-primary-color);
 }
 
-#content > div:nth-child(2n) {
+#content > div.colored:nth-child(2n) {
   background-color: var(--content-bg-secondary-color);
 }
 
+.splitter::before {
+  content: "";
+  border-right: 4px solid var(--footer-map-link-hovered-color);
+  margin-right: 4px;
+}
+
+/* ----- INPUTS ----- */
+
+/* TEXT INPUT */
+
+div#content input[type="text"],
+textarea {
+  background-color: var(--text-input-bg-color);
+  border-radius: 0;
+  border: 2px solid var(--text-input-bg-color);
+  padding: 4px;
+  outline: none;
+  font-family: var(--font);
+}
+
+div#content input[type="text"]:focus,
+textarea:focus {
+  border: 2px solid var(--text-input-border-hovered-color);
+}
+
+textarea.noresize {
+  resize: none;
+}
+
+/* CHECKBOX */
+
+div#content input[type="checkbox"] {
+  background-color: var(--checkbox-input-bg-color);
+  border: 2px solid var(--checkbox-input-border-color);
+  height: 16px;
+  width: 16px;
+  appearance: none;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+div#content input[type="checkbox"]::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  transform: scale(0);
+  transition: 0.1s;
+  background-color: var(--checkbox-input-fg-color);
+}
+
+div#content input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* BUTTON */
+
+div#content button.arrowbutton {
+  border: 0;
+  background-color: var(--button-bg-color);
+  color: var(--button-fg-color);
+  font-size: 14px;
+  width: 100px;
+  padding: 5px;
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+div#content button.arrowbutton:hover {
+  background-color: var(--button-bg-hovered-color);
+}
+
+div#content button.arrowbutton::after {
+  content: "\f054";
+  font-family: "FontAwesome";
+  margin-left: 8px;
+  color: var(--button-arrow-color);
+}
+
+div#content button.arrowbutton:hover::after {
+  color: var(--button-arrow-hovered-color);
+}
+
+div.check {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+/* CONTACT PAGE */
+
+div#contact {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* FORM */
+
+div#contact div#form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+div#contact div#form > div {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+  max-width: 800px;
+}
+
+div#contact div#info {
+  padding: 16px;
+  background-color: var(--color-4);
+  width: calc(250px + 16px * 2);
+}
+
+@media screen and (max-width: 960px) {
+  div#contact {
+    flex-direction: column-reverse;
+  }
+  div#contact div#info {
+    width: calc(100% - 16px * 2);
+  }
+
+  div#contact div#form {
+    justify-content: center;
+  }
+}
