@@ -1,81 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=0.5,maximum-scale=3.0, initial-scale=1.0, user-scalable=1"
-    />
-    <title>CloudCore</title>
-    <link rel="icon" href="images/logo-single-white.svg" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-  </head>
-  <body data-pagename="NOUS CONTACTER" data-linkname="contact">
-    <!-- HEADER - LOADED AUTOMATICALLY -->
-    <header class="loader" data-src="header.html"></header>
-    <!-- CONTENT -->
-    <div id="content">
-      <div id="contact">
-        <div id="info"></div>
-        <div id="form">
-          <div>
-            <input
-              type="text"
-              placeholder="Nom d'entreprise"
-              required="required"
-              name="name"
-            />
-            <input
-              type="text"
-              placeholder="Nom"
-              required="required"
-              name="name"
-            />
-            <input
-              type="text"
-              placeholder="Adresse e-mail*"
-              required="required"
-              name="name"
-            />
-            <input
-              type="text"
-              placeholder="Numéro de téléphone"
-              required="required"
-              name="name"
-            />
-            <textarea
-              placeholder="Message"
-              rows="8"
-              class="noresize"
-            ></textarea>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, minimum-scale=0.5,maximum-scale=3.0, initial-scale=1.0, user-scalable=1" />
+		<title>CloudCore</title>
+		<link rel="icon" href="images/logo-single-white.svg" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+	</head>
+	<body data-pagename="NOUS CONTACTER" data-linkname="contact">
+		<!-- HEADER - LOADED AUTOMATICALLY -->
+		<header class="loader" data-src="header.html"></header>
+		<!-- CONTENT -->
+		<div id="content">
+			<div id="contact">
+				<div id="info"></div>
+				<div id="form">
+					<h1>Contactez nous !</h1>
+					<div>
+						<input type="text" placeholder="Nom d'entreprise" required="required" name="name" />
+						<input type="text" placeholder="Nom*" required="required" name="name" />
+						<input type="text" placeholder="Adresse e-mail*" required="required" name="name" />
+						<input type="text" placeholder="Numéro de téléphone" required="required" name="name" />
+						<textarea placeholder="Message" rows="8" class="noresize"></textarea>
 
-            <div class="check">
-              <input type="checkbox" />
-              <div>Je souhaite m'inscrire à la newsletter</div>
-            </div>
-
-            <button class="arrowbutton">Envoyer</button>
-          </div>
-
-          <div>
-            <input
-              type="text"
-              placeholder="Adresse e-mail*"
-              required="required"
-              name="name"
-            />
-            <button class="arrowbutton">S'inscrire</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- FOOTER - LOADED AUTOMATICALLY -->
-    <footer class="loader" data-src="footer.html"></footer>
-    <!-- SCRIPTS -->
-    <script src="scripts.js"></script>
-  </body>
+						<div class="check">
+							<input type="checkbox" />
+							<div>Je souhaite m'inscrire à la newsletter</div>
+						</div>
+						<p class="splitter">Ces informations seront traitées et sauvegardées dans une base de données.</p>
+						<button class="arrowbutton">Envoyer</button>
+						<p>*Obligatoire</p>
+					</div>
+					<h1>Ne ratez pas les dernières actualitées !</h1>
+					<div>
+						<input type="text" placeholder="Adresse e-mail" required="required" name="name" />
+						<button class="arrowbutton">S'inscrire</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER - LOADED AUTOMATICALLY -->
+		<footer class="loader" data-src="footer.html"></footer>
+		<!-- SCRIPTS -->
+		<script src="scripts.js"></script>
+	</body>
 </html>
