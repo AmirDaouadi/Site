@@ -93,7 +93,6 @@ header div#page {
 	}
 }
 
-
 /* SEPARATORS */
 
 header div.line-separator {
@@ -214,7 +213,7 @@ div#movement {
 	transition: 0.2s;
 }
 
-div#movement > button {
+div#movement > div {
 	width: 41px;
 	height: 41px;
 	border-radius: 100%;
@@ -224,20 +223,22 @@ div#movement > button {
 	transition: 0.2s;
 	box-shadow: 0px 0px 2px black;
 	background-color: var(--nav-bg-color);
+	display: grid;
+	place-content: center;
 }
 
-div#movement > button > div {
+div#movement > div > div {
 	font-size: 18px;
 	transition: 0.2s;
 	color: var(--nav-fg-color);
 }
 
-div#movement > button:hover {
+div#movement > div:hover {
 	width: 45px;
 	height: 45px;
 }
 
-div#movement > button:hover > div {
+div#movement > div:hover > div {
 	color: var(--nav-fg-hovered-color);
 }
 
@@ -792,4 +793,9 @@ div#inscription > div {
 
 div#inscription > input:nth-child(4) {
 	margin-bottom: 16px;
+}
+iframe.map {
+	border: 0;
+	height: 250px;
+	width: 100%;
 }
