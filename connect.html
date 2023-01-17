@@ -13,15 +13,19 @@
 		<header class="loader" data-src="header.html"></header>
 		<!-- CONTENT -->
 		<div id="content">
-			<div id="connect">
+			<div id="connect" class="dynamic_width half">
 				<h1>Connectez-vous à votre compte !</h1>
 				<input type="text" placeholder="Nom d'utilisateur" required="required" name="name" />
 				<input type="text" placeholder="Mot de passe" required="required" name="name" />
-				<div>
-					<button class="arrowbutton">Se connecter</button>
-					<a href="inscription.html" class="arrowbutton inverted">Créer un compte</a>
+				<div class="check">
+					<input type="checkbox" id="check_stayconnected">
+					<label for="check_stayconnected">Rester connecté</label>
 				</div>
-				<a href="" class="colored">Mot de passe oublié</a>
+				<button class="arrowbutton">Se connecter</button>
+				<div class="spread">
+					<a href="" class="colored">Mot de passe oublié</a>
+					<a href="inscription.html" class="colored">Créer un compte</a>
+				</div>
 			</div>
 		</div>
 		<!-- FOOTER - LOADED AUTOMATICALLY -->
