@@ -1376,9 +1376,6 @@ iframe.map {
 }
 
 @media print {
-	body {
-	}
-
 	header {
 		position: absolute;
 	}
