@@ -4,33 +4,33 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, minimum-scale=0.5,maximum-scale=3.0, initial-scale=1.0, user-scalable=1" />
 		<title>CloudCore</title>
-		<link rel="icon" href="images/logo-single-white.svg" />
-		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="icon" href="/images/logo-single-white.svg" />
+		<link rel="stylesheet" type="text/css" href="/styles.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 	</head>
 	<body data-pagename="SE CONNECTER" data-linkname="connect">
 		<!-- HEADER - LOADED AUTOMATICALLY -->
-		<header class="loader" data-src="header.html"></header>
+		<header class="loader" data-src="/header.html"></header>
 		<!-- CONTENT -->
 		<div id="content">
-			<div id="connect" class="dynamic_width half">
+			<form action="https://www.w3schools.com/action_page.php" id="connect" class="dynamic_width half">
 				<h1>Connectez-vous à votre compte !</h1>
-				<input type="text" placeholder="Nom d'utilisateur" required="required" name="name" />
-				<input type="text" placeholder="Mot de passe" required="required" name="name" />
+				<input class="text_input" type="text" placeholder="Nom d'utilisateur" required name="username" />
+				<input class="text_input" type="password" placeholder="Mot de passe" required name="password" />
 				<div class="check">
-					<input type="checkbox" id="check_stayconnected">
-					<label for="check_stayconnected">Rester connecté</label>
+					<input type="checkbox" id="check_resterconnect" name="resterconnect">
+					<label for="check_resterconnect">Rester connecté</label>
 				</div>
 				<button class="arrowbutton">Se connecter</button>
 				<div class="spread">
 					<a href="" class="colored">Mot de passe oublié</a>
-					<a href="inscription.html" class="colored">Créer un compte</a>
+					<a href="/inscription.html" class="colored">Créer un compte</a>
 				</div>
-			</div>
+			</form>
 		</div>
 		<!-- FOOTER - LOADED AUTOMATICALLY -->
-		<footer class="loader" data-src="footer.html"></footer>
+		<footer class="loader" data-src="/footer.html"></footer>
 		<!-- SCRIPTS -->
-		<script src="scripts.js"></script>
+		<script src="/scripts.js"></script>
 	</body>
 </html>

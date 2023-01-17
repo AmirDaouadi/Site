@@ -4,13 +4,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, minimum-scale=0.5,maximum-scale=3.0, initial-scale=1.0, user-scalable=1" />
 		<title>CloudCore</title>
-		<link rel="icon" href="images/logo-single-white.svg" />
-		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="icon" href="/images/logo-single-white.svg" />
+		<link rel="stylesheet" type="text/css" href="/styles.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 	</head>
 	<body data-pagename="CONTACT" data-linkname="contact">
 		<!-- HEADER - LOADED AUTOMATICALLY -->
-		<header class="loader" data-src="header.html"></header>
+		<header class="loader" data-src="/header.html"></header>
 		<!-- CONTENT -->
 		<div id="content">
 			<div id="contact">
@@ -20,40 +20,40 @@
 					<h2 class="splitter">Téléphone</h2>
 					<p>01 32 46 85 30</p>
 					<h2 class="splitter">E-Mail</h2>
-					<a href="google.com">contact@cloudcore.fr</a>
+					<a href="https://google.com">contact@cloudcore.fr</a>
 					<div class="separator minimum"></div>
-					<p>Vous souhaitez <a href="rejoindre.html" class="colored">nous rejoindre</a> ?</p>
+					<p>Vous souhaitez <a href="/rejoindre.html" class="colored">nous rejoindre</a> ?</p>
 				</div>
 				<div id="form">
 					<h1>Contactez-nous !</h1>
-					<div>
-						<input type="text" placeholder="Société" required="required" name="name" />
-						<input type="text" placeholder="Nom*" required="required" name="name" />
-						<input type="text" placeholder="Adresse e-mail*" required="required" name="name" />
-						<input type="text" placeholder="Numéro de téléphone" required="required" name="name" />
-						<textarea placeholder="Message" rows="8" class="noresize"></textarea>
+					<form action="https://www.w3schools.com/action_page.php">
+						<input class="text_input" type="text" placeholder="Société" name="société" />
+						<input class="text_input" type="text" placeholder="Nom*" required name="nom" />
+						<input class="text_input" type="email" placeholder="Adresse e-mail*" required name="email" />
+						<input class="text_input" type="tel" placeholder="Numéro de téléphone" name="téléphone" />
+						<textarea class="text_input noresize" placeholder="Message" required rows="8"></textarea>
 
 						<div class="check">
-							<input type="checkbox" id="check_newletter" />
+							<input type="checkbox" id="check_newletter" name="newsletter"/>
 							<label for="check_newletter">Je souhaite m'inscrire à la newsletter</label>
 						</div>
 						<p class="splitter">Ces informations seront traitées et sauvegardées dans notre base de données.</p>
-						<button class="arrowbutton">Envoyer</button>
+						<button type="submit" class="arrowbutton">Envoyer</button>
 						<p class="small">*Obligatoire</p>
-					</div>
+					</form>
 					<h2>Ne ratez pas les dernières actualitées !</h2>
 					<p>Nous vous enverrons par e-mail les news du monde de l'informatique et du cloud.</p>
-					<div>
-						<input type="text" placeholder="Adresse e-mail" required="required" name="name" />
-						<button class="arrowbutton">S'inscrire</button>
-					</div>
+					<form action="https://www.w3schools.com/action_page.php">
+						<input class="text_input" type="email" placeholder="Adresse e-mail" required name="email" />
+						<button type="submit" class="arrowbutton">S'inscrire</button>
+					</form>
 				</div>
 			</div>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94555.47697616153!2d-74.08255543112841!3d40.655501915156535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sfr!4v1673817590260!5m2!1sen!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
 		</div>
 		<!-- FOOTER - LOADED AUTOMATICALLY -->
-		<footer class="loader" data-src="footer.html"></footer>
+		<footer class="loader" data-src="/footer.html"></footer>
 		<!-- SCRIPTS -->
-		<script src="scripts.js"></script>
+		<script src="/scripts.js"></script>
 	</body>
 </html>
